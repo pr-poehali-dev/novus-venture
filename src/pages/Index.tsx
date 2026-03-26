@@ -63,7 +63,7 @@ export default function VerdantPage() {
   const heroRef = useRef<HTMLDivElement>(null)
   const observerRef = useRef<IntersectionObserver | null>(null)
 
-  const dynamicWords = ["леса", "природу", "животных", "экосистемы", "биоразнообразие", "дикую жизнь", "среду обитания"]
+  const dynamicWords = ["знания", "науку", "молодёжь", "традиции", "природу", "культуру", "будущее"]
 
   useEffect(() => {
     const wordInterval = setInterval(() => {
@@ -156,9 +156,9 @@ export default function VerdantPage() {
           <div className="flex items-center gap-6 md:h-14 h-14">
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="text-lg md:text-xl font-semibold font-mono hover:text-pink-400 transition-colors duration-300"
+              className="text-lg md:text-xl font-semibold font-mono hover:text-green-400 transition-colors duration-300"
             >
-              VERDANT
+              ЭКОЧАЙ
             </button>
 
             <nav className="hidden md:flex items-center gap-8">
@@ -166,19 +166,19 @@ export default function VerdantPage() {
                 onClick={() => scrollToSection("metrics")}
                 className="text-sm text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors duration-300"
               >
-                Результаты
+                О проекте
               </button>
               <button
                 onClick={() => scrollToSection("map")}
                 className="text-sm text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors duration-300"
               >
-                Проекты
+                Маршруты
               </button>
               <button
                 onClick={() => scrollToSection("narrative")}
                 className="text-sm text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors duration-300"
               >
-                Технологии
+                Мероприятия
               </button>
               <button
                 onClick={() => scrollToSection("faq")}
@@ -210,31 +210,31 @@ export default function VerdantPage() {
           <div className="flex flex-col gap-8 items-start text-left w-full">
             <button
               onClick={() => scrollToSection("metrics")}
-              className="font-serif text-5xl md:text-7xl font-light text-[#F2F3F5] hover:text-pink-400 transition-colors duration-300"
+              className="font-serif text-5xl md:text-7xl font-light text-[#F2F3F5] hover:text-green-400 transition-colors duration-300"
             >
-              Результаты
+              О проекте
             </button>
             <button
               onClick={() => scrollToSection("map")}
-              className="font-serif text-5xl md:text-7xl font-light text-[#F2F3F5] hover:text-pink-400 transition-colors duration-300"
+              className="font-serif text-5xl md:text-7xl font-light text-[#F2F3F5] hover:text-green-400 transition-colors duration-300"
             >
-              Проекты
+              Маршруты
             </button>
             <button
               onClick={() => scrollToSection("narrative")}
-              className="font-serif text-5xl md:text-7xl font-light text-[#F2F3F5] hover:text-pink-400 transition-colors duration-300"
+              className="font-serif text-5xl md:text-7xl font-light text-[#F2F3F5] hover:text-green-400 transition-colors duration-300"
             >
-              Технологии
+              Мероприятия
             </button>
             <button
               onClick={() => scrollToSection("faq")}
-              className="font-serif text-5xl md:text-7xl font-light text-[#F2F3F5] hover:text-pink-400 transition-colors duration-300"
+              className="font-serif text-5xl md:text-7xl font-light text-[#F2F3F5] hover:text-green-400 transition-colors duration-300"
             >
               Вопросы
             </button>
             <button
               onClick={() => scrollToSection("cta")}
-              className="font-serif text-5xl md:text-7xl font-light text-[#F2F3F5] hover:text-pink-400 transition-colors duration-300"
+              className="font-serif text-5xl md:text-7xl font-light text-[#F2F3F5] hover:text-green-400 transition-colors duration-300"
             >
               Участвовать
             </button>
@@ -277,21 +277,21 @@ export default function VerdantPage() {
                   wordFade ? "opacity-100 blur-0" : "opacity-0 blur-lg"
                 }`}
               >
-                Защитим <AnimatedText key={dynamicWordIndex} text={dynamicWords[dynamicWordIndex]} delay={0} />
+                Продвигаем <AnimatedText key={dynamicWordIndex} text={dynamicWords[dynamicWordIndex]} delay={0} />
               </span>
               <span className="block stagger-reveal text-7xl font-light md:text-8xl" style={{ animationDelay: "90ms" }}>
-                в масштабе
+                через чай
               </span>
             </h1>
             <p
               className="text-[#A7ABB3] text-base md:text-lg max-w-[520px] mx-auto mb-8 leading-relaxed stagger-reveal text-white"
               style={{ animationDelay: "180ms" }}
             >
-              Мониторинг лесов в реальном времени с помощью ИИ. Обнаружение угроз, отслеживание биоразнообразия, сохранение природы для будущих поколений.
+              Научно-популярный проект Сочинского государственного университета. Конкурсы, экспедиции и маршруты вокруг самого северного чая России.
             </p>
             <div className="stagger-reveal" style={{ animationDelay: "270ms" }}>
-              <Button className="glass-button px-8 py-6 text-base rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 text-white">
-                Начать защиту
+              <Button onClick={() => scrollToSection("cta")} className="glass-button px-8 py-6 text-base rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 text-white">
+                Принять участие
               </Button>
             </div>
           </div>
@@ -308,7 +308,7 @@ export default function VerdantPage() {
               >
                 <img
                   src="/dashboard-screenshot.png"
-                  alt="Панель мониторинга VERDANT"
+                  alt="ЭКОЧАЙ: научный вектор"
                   className="object-cover dashboard-image w-full h-auto"
                 />
               </div>
@@ -320,7 +320,7 @@ export default function VerdantPage() {
       <section className="relative py-12 border-y border-white/5 bg-[#0B0C0F] overflow-hidden md:py-8 md:pt-8 md:pb-4">
         <div className="w-full">
           <p className="text-center text-xs md:text-sm uppercase tracking-[0.2em] text-[#A7ABB3] mb-8">
-            Нам доверяют ведущие природоохранные организации
+            Партнёры и участники проекта
           </p>
           <div className="logo-marquee">
             <div className="logo-marquee-content">
@@ -358,31 +358,30 @@ export default function VerdantPage() {
       <section id="metrics" className="relative py-20 md:py-32 px-4 animate-on-scroll md:pt-24 md:pb-20">
         <div className="max-w-[1120px] w-full mx-auto">
           <h2 className="font-serif text-[32px] leading-[1.15] md:text-[48px] md:leading-[1.1] font-medium mb-6 md:mb-8 text-center text-balance">
-            Природоохранный{" "}
+            Проект{" "}
             <span
               className="inline-block"
               style={{
-                background: "linear-gradient(135deg, #d9a7c7 0%, #fffcdc 100%)",
+                background: "linear-gradient(135deg, #a7c7a7 0%, #fffcdc 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
               }}
             >
-              результат
-            </span>{" "}
-            в масштабе
+              в цифрах
+            </span>
           </h2>
 
           <p className="text-[#A7ABB3] text-sm md:text-base mb-12 md:mb-16 text-center max-w-[600px] mx-auto leading-relaxed">
-            Нам доверяют природоохранные организации по всему миру. Работаем на технологиях, созданных для природы.
+            Сочинский государственный университет объединяет молодёжь со всей России вокруг уникального самого северного чая страны.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 max-w-[800px] mx-auto">
             {[
-              { label: "ЗАЩИЩЕНО ЛЕСОВ", value: "2.4M", desc: "гектаров по всему миру", color: "pink" },
-              { label: "ВИДОВ НА МОНИТОРИНГЕ", value: "12K+", desc: "диких животных", color: "purple" },
-              { label: "ПОГЛОЩЕНО УГЛЕРОДА", value: "18M", desc: "тонн CO2", color: "pink" },
-              { label: "ТОЧНОСТЬ ДЕТЕКЦИИ", value: "99.4%", desc: "обнаружения угроз", color: "purple" },
+              { label: "УЧАСТНИКОВ КОНКУРСА", value: "500+", desc: "школьников и студентов", color: "pink" },
+              { label: "НОМИНАЦИЙ «НЕЙРОЧАЙ»", value: "5", desc: "творческих направлений", color: "purple" },
+              { label: "МАРШРУТОВ", value: "4", desc: "научно-популярных по Сочи", color: "pink" },
+              { label: "ЛЕТ ИСТОРИИ", value: "100+", desc: "сочинскому чаю", color: "purple" },
             ].map((metric, i) => (
               <div
                 key={i}
@@ -409,14 +408,14 @@ export default function VerdantPage() {
       <section id="map" className="relative py-20 md:py-32 animate-on-scroll bg-[#0B0C0F]">
         <div className="text-center mb-12 md:mb-16 px-4">
           <div className="text-[10px] md:text-xs uppercase tracking-[0.15em] text-[#A7ABB3] mb-6 flex items-center justify-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-pink-400 animate-pulse" />
-            ГЛОБАЛЬНЫЙ ОХВАТ
+            <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+            ЭКСПЕДИЦИЯ «ЧАЙНАЯ НАУКА»
           </div>
           <h2 className="font-serif text-[32px] leading-[1.15] md:text-[48px] md:leading-[1.1] font-medium mb-6 text-balance">
-            Проекты по всему миру
+            Чайные плантации Сочи
           </h2>
           <p className="text-[#A7ABB3] text-sm md:text-base max-w-[600px] mx-auto leading-relaxed">
-            Мониторинг и защита критически важных лесных экосистем на пяти континентах
+            Победители конкурса «НЕйроЧай» посетят ключевые точки производства самого северного чая России
           </p>
         </div>
 
@@ -432,25 +431,25 @@ export default function VerdantPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-stretch">
             <div className="max-w-[720px]">
               <div className="text-[10px] md:text-xs uppercase tracking-[0.15em] text-[#A7ABB3] mb-6 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-pink-400 animate-pulse" />
-                ТЕХНОЛОГИИ СОХРАНЕНИЯ
+                <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                ФЕСТИВАЛЬ «ЧАЙНАЯ КАРТА ЕДИНСТВА»
               </div>
               <h2 className="font-serif text-[36px] leading-[1.15] md:text-[56px] md:leading-[1.1] font-medium mb-8 text-balance">
-                Каждая экосистема{" "}
+                Каждое мероприятие{" "}
                 <span
                   className="inline-block"
                   style={{
-                    background: "linear-gradient(135deg, #d9a7c7 0%, #fffcdc 100%)",
+                    background: "linear-gradient(135deg, #a7c7a7 0%, #fffcdc 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
                   }}
                 >
-                  важна
+                  открытие
                 </span>
               </h2>
               <p className="text-[#A7ABB3] text-base md:text-lg leading-relaxed mb-12">
-                Наши спутниковые и ИИ-технологии отслеживают биоразнообразие, выявляют незаконные вырубки, анализируют паттерны обезлесения и оповещают команды в реальном времени. Сохранение со скоростью, которую требует природа.
+                Лектории, открытые микрофоны с учёными, экскурсии «От ростка до пиалы», проектная школа и финальная презентация маршрутов — всё это объединяет молодёжь вокруг уникального сочинского чая.
               </p>
 
               <div className="md:hidden mb-8">
@@ -475,27 +474,27 @@ export default function VerdantPage() {
               <div className="space-y-6">
                 {[
                   {
-                    title: "Дроны-разведчики",
-                    desc: "Аэросъемка для учета дикой природы и видового разнообразия",
-                    icon: "Plane",
+                    title: "Конкурс «НЕйроЧай»",
+                    desc: "Онлайн-конкурс работ, созданных с помощью нейросети: логотипы, упаковки, сказки, гиды",
+                    icon: "Sparkles",
                     image: "/drone.png",
                   },
                   {
-                    title: "Мониторинг 24/7",
-                    desc: "Круглосуточное спутниковое наблюдение с мгновенными оповещениями",
-                    icon: "Satellite",
+                    title: "Экспедиция «Чайная наука»",
+                    desc: "Победители едут в Сочи и изучают полный цикл производства чая на плантациях",
+                    icon: "MapPin",
                     image: "/real-time-satellite.png",
                   },
                   {
-                    title: "Учет биоразнообразия",
-                    desc: "Картирование и мониторинг популяций животных по регионам",
-                    icon: "PawPrint",
+                    title: "Лектории «ПРОкаЧай»",
+                    desc: "Научно-популярные лекции об агробиологии чая и научно-популярном туризме",
+                    icon: "GraduationCap",
                     image: "/biodiversity-tracking.png",
                   },
                   {
-                    title: "Защита от вырубки",
-                    desc: "Обнаружение угроз до их эскалации",
-                    icon: "Trees",
+                    title: "Проектная школа",
+                    desc: "«Вместе V Сочи» — создание 4 маршрутов для разных аудиторий",
+                    icon: "Route",
                     image: "/deforestation-detect.png",
                   },
                 ].map((feature, i) => (
@@ -538,19 +537,19 @@ export default function VerdantPage() {
               <div className="relative w-full h-full min-h-[500px]">
                 {[
                   {
-                    title: "Дроны-разведчики",
+                    title: "Конкурс НЕйроЧай",
                     image: "/drone.png",
                   },
                   {
-                    title: "Мониторинг 24/7",
+                    title: "Экспедиция Чайная наука",
                     image: "/real-time-satellite.png",
                   },
                   {
-                    title: "Учет биоразнообразия",
+                    title: "Лектории ПРОкаЧай",
                     image: "/biodiversity-tracking.png",
                   },
                   {
-                    title: "Защита от вырубки",
+                    title: "Проектная школа",
                     image: "/deforestation-detect.png",
                   },
                 ].map((feature, i) => {
@@ -585,7 +584,7 @@ export default function VerdantPage() {
         <div className="max-w-[800px] w-full mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <div className="text-[10px] md:text-xs uppercase tracking-[0.15em] text-[#A7ABB3] mb-6 flex items-center justify-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-pink-400 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
               ЧАСТЫЕ ВОПРОСЫ
             </div>
             <h2 className="font-serif text-[32px] leading-[1.15] md:text-[48px] md:leading-[1.1] font-medium mb-6 text-balance">
@@ -593,7 +592,7 @@ export default function VerdantPage() {
               <span
                 className="inline-block"
                 style={{
-                  background: "linear-gradient(135deg, #d9a7c7 0%, #fffcdc 100%)",
+                  background: "linear-gradient(135deg, #a7c7a7 0%, #fffcdc 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
@@ -604,41 +603,41 @@ export default function VerdantPage() {
               ?
             </h2>
             <p className="text-[#A7ABB3] text-sm md:text-base max-w-[600px] mx-auto leading-relaxed">
-              Все, что нужно знать о VERDANT и нашей платформе для экологического мониторинга.
+              Всё, что нужно знать о проекте «ЭКОЧАЙ: научный вектор» и как принять участие.
             </p>
           </div>
 
           <div className="space-y-4">
             {[
               {
-                question: "Как работает спутниковый мониторинг VERDANT?",
+                question: "Что такое конкурс «НЕйроЧай» и кто может участвовать?",
                 answer:
-                  "Наша платформа использует сеть спутников в сочетании с ИИ-алгоритмами для анализа лесного покрова в реальном времени. Мы обнаруживаем изменения площадью от 0,5 гектара в течение 24 часов, что позволяет оперативно реагировать на угрозы: незаконные вырубки или лесные пожары.",
+                  "«НЕйроЧай» — онлайн-конкурс для школьников и молодёжи по всей России. Участники создают с помощью нейросети логотипы, дизайн упаковки, сказки, маркетинговые кампании и интерактивные гиды на тему сочинского чая. Конкурс организует Сочинский государственный университет.",
               },
               {
-                question: "Какие регионы охватывает VERDANT?",
+                question: "Что получат победители конкурса «НЕйроЧай»?",
                 answer:
-                  "VERDANT сейчас ведет мониторинг более 2,4 миллиона гектаров на пяти континентах: тропические леса Амазонии, бассейн Конго, леса Борнео, сибирская тайга и тихоокеанский северо-запад Америки. Мы постоянно расширяем охват для защиты новых экосистем.",
+                  "Победители и лауреаты конкурса приедут в Сочи для участия в уникальной научно-практической экспедиции «Чайная наука». Они посетят чайные плантации ЗАО «Дагомысчай», АО «Солохаульский чай», Мацестинскую чайную фабрику и Музей чая И.А. Кошмана.",
               },
               {
-                question: "Насколько точна система обнаружения угроз?",
+                question: "Что такое экспедиция «Чайная наука»?",
                 answer:
-                  "Наша система обнаружения угроз на базе ИИ достигает точности 99,4%. Мы используем модели машинного обучения, обученные на миллионах спутниковых снимков, чтобы отличать естественные изменения от антропогенного обезлесения или незаконной деятельности.",
+                  "Это оффлайн-экспедиция на чайные плантации Сочи. Участники изучают полный цикл производства чая: агротехнику, ферментацию, упаковку. Материалы, собранные в экспедиции, лягут в основу научно-популярных маршрутов проекта.",
               },
               {
-                question: "Можно ли интегрировать VERDANT с существующими системами?",
+                question: "Для кого разрабатываются 4 маршрута «ЭкоЧай: научный вектор»?",
                 answer:
-                  "Да, VERDANT предоставляет полноценный API для интеграции с существующими системами управления природоохранной деятельностью, ГИС-платформами и системами оповещения. Наша документация содержит подробные руководства по внедрению.",
+                  "Маршруты создаются для четырёх аудиторий: школьники 6–18 лет, студенты СПО и вузов, взрослые граждане старше 18 лет и иностранные граждане до 35 лет, находящиеся в России. Каждый маршрут учитывает особенности и интересы своей аудитории.",
               },
               {
-                question: "Какова модель ценообразования VERDANT?",
+                question: "Что такое Фестиваль «Чайная карта единства»?",
                 answer:
-                  "Мы предлагаем многоуровневое ценообразование в зависимости от площади мониторинга и набора функций. Некоммерческие природоохранные организации могут претендовать на льготные тарифы или гранты. Свяжитесь с нами для расчета индивидуального предложения.",
+                  "Это финальное мероприятие проекта, включающее научные лектории «ПРОкаЧай», открытые микрофоны с учёными, экскурсии «От ростка до пиалы», молодёжную проектную школу и «Аллею национальных чайных подворий», где представители разных народов России демонстрируют свои традиции чаепития.",
               },
               {
-                question: "Как я могу помочь в сохранении лесов через VERDANT?",
+                question: "Как организации или вузы могут стать партнёрами проекта?",
                 answer:
-                  "Есть несколько способов: пожертвование на мониторинг незащищенных территорий, волонтерство в командах наземной верификации или корпоративное партнерство. Каждый вклад помогает защищать критически важные экосистемы.",
+                  "Для участия в партнёрстве, рассылки информационных писем по вузам или включения в медиаплан проекта свяжитесь с командой Сочинского государственного университета. Работы участников конкурса используются в публикациях научно-популярного контента.",
               },
             ].map((faq, i) => (
               <div
@@ -684,19 +683,19 @@ export default function VerdantPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#0B0C0F] via-[#0B0C0F]/60 to-transparent pointer-events-none" />
         <div className="max-w-[800px] w-full mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 glass-pill px-4 py-2 rounded-full mb-8 text-xs md:text-sm text-[#A7ABB3]">
-            <span className="w-1.5 h-1.5 rounded-full bg-pink-400 animate-pulse" />
-            Спасем планету
+            <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+            Сочинский государственный университет
           </div>
 
           <h2 className="font-serif text-[40px] leading-[1.15] md:text-[64px] md:leading-[1.1] font-medium mb-6 text-balance">
-            Присоединяйтесь к глобальному движению
+            Присоединяйтесь к «ЭкоЧай: научный вектор»
           </h2>
           <p className="text-[#A7ABB3] text-base md:text-lg mb-10 leading-relaxed max-w-[560px] mx-auto">
-            Вместе мы строим устойчивое будущее. Начните защищать леса уже сегодня.
+            Участвуйте в конкурсе «НЕйроЧай», выиграйте экспедицию в Сочи и помогите создать маршруты вокруг самого северного чая России.
           </p>
 
           <Button className="glass-button text-base rounded-full bg-white/5 border border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-300 text-white px-8 py-6 md:text-base">
-            Начать сейчас
+            Подать заявку
           </Button>
         </div>
       </section>
@@ -706,9 +705,9 @@ export default function VerdantPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-12">
             {/* Brand Column */}
             <div className="flex flex-col gap-4">
-              <div className="text-lg font-semibold font-mono">VERDANT</div>
+              <div className="text-lg font-semibold font-mono">ЭКОЧАЙ</div>
               <p className="text-xs text-[#A7ABB3] leading-relaxed">
-                Защита лесов по всему миру с помощью мониторинга в реальном времени и ИИ-технологий.
+                Научно-популярный проект Сочинского государственного университета. Продвигаем агробиологические знания через чай.
               </p>
               <div className="flex items-center gap-4 mt-2">
                 <a
@@ -737,39 +736,36 @@ export default function VerdantPage() {
               </div>
             </div>
 
-            {/* Product Menu */}
+            {/* Events Menu */}
             <div className="flex flex-col gap-4">
-              <div className="text-xs uppercase tracking-[0.15em] text-[#F2F3F5] font-semibold mb-2">Продукт</div>
+              <div className="text-xs uppercase tracking-[0.15em] text-[#F2F3F5] font-semibold mb-2">Мероприятия</div>
               <div className="flex flex-col gap-3">
-                <a href="#" className="text-sm text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors">
-                  Возможности
+                <a href="#narrative" className="text-sm text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors">
+                  Конкурс «НЕйроЧай»
                 </a>
-                <a href="#" className="text-sm text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors">
-                  Тарифы
+                <a href="#narrative" className="text-sm text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors">
+                  Экспедиция «Чайная наука»
                 </a>
-                <a href="#" className="text-sm text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors">
-                  Документация
+                <a href="#narrative" className="text-sm text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors">
+                  Фестиваль «Чайная карта единства»
                 </a>
-                <a href="#" className="text-sm text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors">
-                  API
+                <a href="#map" className="text-sm text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors">
+                  Маршруты по Сочи
                 </a>
               </div>
             </div>
 
-            {/* Company Menu */}
+            {/* University Menu */}
             <div className="flex flex-col gap-4">
-              <div className="text-xs uppercase tracking-[0.15em] text-[#F2F3F5] font-semibold mb-2">Компания</div>
+              <div className="text-xs uppercase tracking-[0.15em] text-[#F2F3F5] font-semibold mb-2">Организатор</div>
               <div className="flex flex-col gap-3">
-                <a href="#" className="text-sm text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors">
-                  О нас
+                <a href="https://sutr.ru" target="_blank" rel="noopener noreferrer" className="text-sm text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors">
+                  СГУ Сочи
                 </a>
-                <a href="#" className="text-sm text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors">
-                  Блог
+                <a href="#faq" className="text-sm text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors">
+                  Вопросы и ответы
                 </a>
-                <a href="#" className="text-sm text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors">
-                  Карьера
-                </a>
-                <a href="#" className="text-sm text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors">
+                <a href="#cta" className="text-sm text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors">
                   Контакты
                 </a>
               </div>
@@ -778,14 +774,14 @@ export default function VerdantPage() {
             {/* Newsletter Subscription */}
             <div className="flex flex-col gap-4">
               <div className="text-xs uppercase tracking-[0.15em] text-[#F2F3F5] font-semibold mb-2">Рассылка</div>
-              <p className="text-xs text-[#A7ABB3] mb-3">Получайте новости об экологических инициативах.</p>
+              <p className="text-xs text-[#A7ABB3] mb-3">Получайте новости о конкурсе и мероприятиях проекта.</p>
               <div className="flex flex-col gap-2">
                 <input
                   type="email"
                   placeholder="Введите email"
-                  className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-xs text-[#F2F3F5] placeholder-[#A7ABB3] focus:outline-none focus:border-pink-400/50 focus:ring-1 focus:ring-pink-400/20 transition-all"
+                  className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-xs text-[#F2F3F5] placeholder-[#A7ABB3] focus:outline-none focus:border-green-400/50 focus:ring-1 focus:ring-green-400/20 transition-all"
                 />
-                <button className="px-4 py-2 border rounded-lg text-xs font-medium hover:bg-pink-500/30 hover:border-pink-500/50 transition-all bg-green-800 border-green-700 text-white">
+                <button className="px-4 py-2 border rounded-lg text-xs font-medium hover:bg-green-500/30 hover:border-green-500/50 transition-all bg-green-800 border-green-700 text-white">
                   Подписаться
                 </button>
               </div>
@@ -794,7 +790,7 @@ export default function VerdantPage() {
 
           {/* Footer Bottom */}
           <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#A7ABB3]">
-            <div>2025 VERDANT. Все права защищены.</div>
+            <div>2025 ЭКОЧАЙ: научный вектор. Сочинский государственный университет.</div>
             <div className="flex gap-6">
               <a href="#" className="hover:text-[#F2F3F5] transition-colors">
                 Политика конфиденциальности
