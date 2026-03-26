@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { PawPrint, Trees, Satellite, Menu, X, Youtube, Instagram, ChevronDown } from "lucide-react"
+import Icon from "@/components/ui/icon"
 import { AnimatedText } from "@/components/animated-text"
-import { CustomDroneIcon } from "@/components/drone-icon"
 import { WorldMap } from "@/components/world-map"
 import { experiences } from "@/lib/experience-data"
 import type { Experience } from "@/lib/experience-data"
@@ -200,7 +199,7 @@ export default function VerdantPage() {
               className="md:hidden ml-auto p-2 hover:bg-white/5 rounded-lg transition-colors duration-300"
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {isMenuOpen ? <Icon name="X" size={20} /> : <Icon name="Menu" size={20} />}
             </button>
           </div>
         </div>
@@ -478,25 +477,25 @@ export default function VerdantPage() {
                   {
                     title: "Дроны-разведчики",
                     desc: "Аэросъемка для учета дикой природы и видового разнообразия",
-                    icon: CustomDroneIcon,
+                    icon: "Plane",
                     image: "/drone.png",
                   },
                   {
                     title: "Мониторинг 24/7",
                     desc: "Круглосуточное спутниковое наблюдение с мгновенными оповещениями",
-                    icon: Satellite,
+                    icon: "Satellite",
                     image: "/real-time-satellite.png",
                   },
                   {
                     title: "Учет биоразнообразия",
                     desc: "Картирование и мониторинг популяций животных по регионам",
-                    icon: PawPrint,
+                    icon: "PawPrint",
                     image: "/biodiversity-tracking.png",
                   },
                   {
                     title: "Защита от вырубки",
                     desc: "Обнаружение угроз до их эскалации",
-                    icon: Trees,
+                    icon: "Trees",
                     image: "/deforestation-detect.png",
                   },
                 ].map((feature, i) => (
@@ -514,8 +513,10 @@ export default function VerdantPage() {
                       selectedFeature === i ? "border border-white/20" : "border border-white/10"
                     }`}
                   >
-                    <feature.icon
-                      className={`w-6 h-6 flex-shrink-0 mt-1 transition-colors ${
+                    <Icon
+                      name={feature.icon}
+                      size={24}
+                      className={`flex-shrink-0 mt-1 transition-colors ${
                         selectedFeature === i ? "text-green-400" : "text-green-500/60"
                       }`}
                     />
@@ -649,8 +650,10 @@ export default function VerdantPage() {
                   className="w-full flex items-center justify-between p-6 text-left"
                 >
                   <span className="text-base md:text-lg font-medium pr-4">{faq.question}</span>
-                  <ChevronDown
-                    className={`w-5 h-5 flex-shrink-0 text-[#A7ABB3] transition-transform duration-300 ${
+                  <Icon
+                    name="ChevronDown"
+                    size={20}
+                    className={`flex-shrink-0 text-[#A7ABB3] transition-transform duration-300 ${
                       openFaqIndex === i ? "rotate-180" : ""
                     }`}
                   />
@@ -722,14 +725,14 @@ export default function VerdantPage() {
                   className="text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors"
                   aria-label="YouTube"
                 >
-                  <Youtube className="w-4 h-4" />
+                  <Icon name="Youtube" size={16} />
                 </a>
                 <a
                   href="#"
                   className="text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors"
                   aria-label="Instagram"
                 >
-                  <Instagram className="w-4 h-4" />
+                  <Icon name="Instagram" size={16} />
                 </a>
               </div>
             </div>
